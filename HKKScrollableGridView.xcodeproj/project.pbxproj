@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A44FF4F1A10EF9200EF779A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A44FF4E1A10EF9200EF779A /* main.m */; };
+		4A44FF521A10EF9200EF779A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A44FF511A10EF9200EF779A /* AppDelegate.m */; };
+		4A44FF551A10EF9200EF779A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A44FF541A10EF9200EF779A /* ViewController.m */; };
+		4A44FF581A10EF9200EF779A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A44FF561A10EF9200EF779A /* Main.storyboard */; };
+		4A44FF5A1A10EF9300EF779A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A44FF591A10EF9300EF779A /* Images.xcassets */; };
+		4A44FF5D1A10EF9300EF779A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A44FF5B1A10EF9300EF779A /* LaunchScreen.xib */; };
+		4A44FF691A10EF9300EF779A /* HKKScrollableGridViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A44FF681A10EF9300EF779A /* HKKScrollableGridViewTests.m */; };
+		4A44FF741A10EFEA00EF779A /* HKKScrollableGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A44FF731A10EFEA00EF779A /* HKKScrollableGridView.m */; };
+		4A4E72021A1B229C0097590E /* MyScrollableGridRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E72011A1B229C0097590E /* MyScrollableGridRowView.m */; };
+		4A4E72051A1B292E0097590E /* MyScrollableGridHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E72041A1B292E0097590E /* MyScrollableGridHeaderView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4A44FF631A10EF9300EF779A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A44FF411A10EF9200EF779A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A44FF481A10EF9200EF779A;
+			remoteInfo = HKKScrollableGridView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4A44FF491A10EF9200EF779A /* HKKScrollableGridView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HKKScrollableGridView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A44FF4D1A10EF9200EF779A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A44FF4E1A10EF9200EF779A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4A44FF501A10EF9200EF779A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4A44FF511A10EF9200EF779A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4A44FF531A10EF9200EF779A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4A44FF541A10EF9200EF779A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4A44FF571A10EF9200EF779A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4A44FF591A10EF9300EF779A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4A44FF5C1A10EF9300EF779A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		4A44FF621A10EF9300EF779A /* HKKScrollableGridViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HKKScrollableGridViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A44FF671A10EF9300EF779A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A44FF681A10EF9300EF779A /* HKKScrollableGridViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HKKScrollableGridViewTests.m; sourceTree = "<group>"; };
+		4A44FF721A10EFEA00EF779A /* HKKScrollableGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKKScrollableGridView.h; sourceTree = "<group>"; };
+		4A44FF731A10EFEA00EF779A /* HKKScrollableGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKKScrollableGridView.m; sourceTree = "<group>"; };
+		4A4E72001A1B229C0097590E /* MyScrollableGridRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyScrollableGridRowView.h; sourceTree = "<group>"; };
+		4A4E72011A1B229C0097590E /* MyScrollableGridRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScrollableGridRowView.m; sourceTree = "<group>"; };
+		4A4E72031A1B292E0097590E /* MyScrollableGridHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyScrollableGridHeaderView.h; sourceTree = "<group>"; };
+		4A4E72041A1B292E0097590E /* MyScrollableGridHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScrollableGridHeaderView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4A44FF461A10EF9200EF779A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A44FF5F1A10EF9300EF779A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A44FF401A10EF9200EF779A = {
+			isa = PBXGroup;
+			children = (
+				4A44FF4B1A10EF9200EF779A /* HKKScrollableGridView */,
+				4A44FF651A10EF9300EF779A /* HKKScrollableGridViewTests */,
+				4A44FF4A1A10EF9200EF779A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4A44FF4A1A10EF9200EF779A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A44FF491A10EF9200EF779A /* HKKScrollableGridView.app */,
+				4A44FF621A10EF9300EF779A /* HKKScrollableGridViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4A44FF4B1A10EF9200EF779A /* HKKScrollableGridView */ = {
+			isa = PBXGroup;
+			children = (
+				4A44FF501A10EF9200EF779A /* AppDelegate.h */,
+				4A44FF511A10EF9200EF779A /* AppDelegate.m */,
+				4A44FF531A10EF9200EF779A /* ViewController.h */,
+				4A44FF541A10EF9200EF779A /* ViewController.m */,
+				4A4E72001A1B229C0097590E /* MyScrollableGridRowView.h */,
+				4A4E72011A1B229C0097590E /* MyScrollableGridRowView.m */,
+				4A4E72031A1B292E0097590E /* MyScrollableGridHeaderView.h */,
+				4A4E72041A1B292E0097590E /* MyScrollableGridHeaderView.m */,
+				4A44FF561A10EF9200EF779A /* Main.storyboard */,
+				4A44FF591A10EF9300EF779A /* Images.xcassets */,
+				4A44FF5B1A10EF9300EF779A /* LaunchScreen.xib */,
+				4A44FF4C1A10EF9200EF779A /* Supporting Files */,
+				4A44FF721A10EFEA00EF779A /* HKKScrollableGridView.h */,
+				4A44FF731A10EFEA00EF779A /* HKKScrollableGridView.m */,
+			);
+			path = HKKScrollableGridView;
+			sourceTree = "<group>";
+		};
+		4A44FF4C1A10EF9200EF779A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4A44FF4D1A10EF9200EF779A /* Info.plist */,
+				4A44FF4E1A10EF9200EF779A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4A44FF651A10EF9300EF779A /* HKKScrollableGridViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				4A44FF681A10EF9300EF779A /* HKKScrollableGridViewTests.m */,
+				4A44FF661A10EF9300EF779A /* Supporting Files */,
+			);
+			path = HKKScrollableGridViewTests;
+			sourceTree = "<group>";
+		};
+		4A44FF661A10EF9300EF779A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4A44FF671A10EF9300EF779A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4A44FF481A10EF9200EF779A /* HKKScrollableGridView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A44FF6C1A10EF9300EF779A /* Build configuration list for PBXNativeTarget "HKKScrollableGridView" */;
+			buildPhases = (
+				4A44FF451A10EF9200EF779A /* Sources */,
+				4A44FF461A10EF9200EF779A /* Frameworks */,
+				4A44FF471A10EF9200EF779A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HKKScrollableGridView;
+			productName = HKKScrollableGridView;
+			productReference = 4A44FF491A10EF9200EF779A /* HKKScrollableGridView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4A44FF611A10EF9300EF779A /* HKKScrollableGridViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A44FF6F1A10EF9300EF779A /* Build configuration list for PBXNativeTarget "HKKScrollableGridViewTests" */;
+			buildPhases = (
+				4A44FF5E1A10EF9300EF779A /* Sources */,
+				4A44FF5F1A10EF9300EF779A /* Frameworks */,
+				4A44FF601A10EF9300EF779A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A44FF641A10EF9300EF779A /* PBXTargetDependency */,
+			);
+			name = HKKScrollableGridViewTests;
+			productName = HKKScrollableGridViewTests;
+			productReference = 4A44FF621A10EF9300EF779A /* HKKScrollableGridViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A44FF411A10EF9200EF779A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = rhlab;
+				TargetAttributes = {
+					4A44FF481A10EF9200EF779A = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					4A44FF611A10EF9300EF779A = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 4A44FF481A10EF9200EF779A;
+					};
+				};
+			};
+			buildConfigurationList = 4A44FF441A10EF9200EF779A /* Build configuration list for PBXProject "HKKScrollableGridView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4A44FF401A10EF9200EF779A;
+			productRefGroup = 4A44FF4A1A10EF9200EF779A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A44FF481A10EF9200EF779A /* HKKScrollableGridView */,
+				4A44FF611A10EF9300EF779A /* HKKScrollableGridViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4A44FF471A10EF9200EF779A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A44FF581A10EF9200EF779A /* Main.storyboard in Resources */,
+				4A44FF5D1A10EF9300EF779A /* LaunchScreen.xib in Resources */,
+				4A44FF5A1A10EF9300EF779A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A44FF601A10EF9300EF779A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4A44FF451A10EF9200EF779A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A44FF741A10EFEA00EF779A /* HKKScrollableGridView.m in Sources */,
+				4A4E72021A1B229C0097590E /* MyScrollableGridRowView.m in Sources */,
+				4A44FF551A10EF9200EF779A /* ViewController.m in Sources */,
+				4A44FF521A10EF9200EF779A /* AppDelegate.m in Sources */,
+				4A4E72051A1B292E0097590E /* MyScrollableGridHeaderView.m in Sources */,
+				4A44FF4F1A10EF9200EF779A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A44FF5E1A10EF9300EF779A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A44FF691A10EF9300EF779A /* HKKScrollableGridViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4A44FF641A10EF9300EF779A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A44FF481A10EF9200EF779A /* HKKScrollableGridView */;
+			targetProxy = 4A44FF631A10EF9300EF779A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4A44FF561A10EF9200EF779A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A44FF571A10EF9200EF779A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4A44FF5B1A10EF9300EF779A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A44FF5C1A10EF9300EF779A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4A44FF6A1A10EF9300EF779A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4A44FF6B1A10EF9300EF779A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4A44FF6D1A10EF9300EF779A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HKKScrollableGridView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4A44FF6E1A10EF9300EF779A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HKKScrollableGridView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4A44FF701A10EF9300EF779A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HKKScrollableGridViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HKKScrollableGridView.app/HKKScrollableGridView";
+			};
+			name = Debug;
+		};
+		4A44FF711A10EF9300EF779A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HKKScrollableGridViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HKKScrollableGridView.app/HKKScrollableGridView";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4A44FF441A10EF9200EF779A /* Build configuration list for PBXProject "HKKScrollableGridView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A44FF6A1A10EF9300EF779A /* Debug */,
+				4A44FF6B1A10EF9300EF779A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A44FF6C1A10EF9300EF779A /* Build configuration list for PBXNativeTarget "HKKScrollableGridView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A44FF6D1A10EF9300EF779A /* Debug */,
+				4A44FF6E1A10EF9300EF779A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A44FF6F1A10EF9300EF779A /* Build configuration list for PBXNativeTarget "HKKScrollableGridViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A44FF701A10EF9300EF779A /* Debug */,
+				4A44FF711A10EF9300EF779A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4A44FF411A10EF9200EF779A /* Project object */;
+}
