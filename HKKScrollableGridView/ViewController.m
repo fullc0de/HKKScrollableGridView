@@ -29,7 +29,7 @@
     _gridView.delegate = self;
     _gridView.verticalBounce = NO;
     _gridView.backgroundColor = [UIColor colorWithWhite:0.8 alpha:1.0f];
-    [_gridView registerClassForGridCellView:[MyScrollableGridRowView class]];
+    [_gridView registerClassForGridCellView:[MyScrollableGridRowView class] reuseIdentifier:@"MyScrollableGridRowView"];
     
     [self.view addSubview:_gridView];
 }
@@ -56,7 +56,7 @@
 
 - (HKKScrollableGridTableCellView *)scrollableGridView:(HKKScrollableGridView *)gridView viewForRowIndex:(NSUInteger)rowIndex;
 {
-    MyScrollableGridRowView *cellView = (MyScrollableGridRowView *)[gridView dequeueReusableViewForRowIndex:rowIndex];
+    MyScrollableGridRowView *cellView = (MyScrollableGridRowView *)[gridView dequeueReusableViewForRowIndex:rowIndex reuseIdentifier:@"MyScrollableGridRowView"];
     cellView.fixedString = [NSString stringWithFormat:@"R%ld", (long)rowIndex];
     cellView.scrollableString = @"1  2  3  4  5  6  7  8  9  1  2  3  4  5  6  a  b  c  d  e  f  g  h  i  j  k";
     return cellView;

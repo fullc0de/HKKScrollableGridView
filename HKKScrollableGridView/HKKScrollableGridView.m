@@ -132,7 +132,7 @@ static NSString * const kNotificationUserInfoContentOffset = @"kNotificationUser
 
 - (BOOL)isScrollable
 {
-    return _scrollView.width < _scrollView.contentSize.width;
+    return _scrollView.frame.size.width < _scrollView.contentSize.width;
 }
 
 - (void)makeScrollableContentViewBeEmpty
