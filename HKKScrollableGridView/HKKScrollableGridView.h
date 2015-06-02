@@ -3,7 +3,7 @@
 //  HKKScrollableGridView
 //
 //  Created by kyokook on 2014. 11. 10..
-//  Copyright (c) 2014 rhlab. All rights reserved.
+//  Copyright (c) 2014년 rhlab. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong) UIView *fixedView;            ///< A base view for fixed area which is placed in front of the cell view.
 @property (nonatomic, strong) UIView *scrolledContentView;  ///< A base view for scrollable area followed by fixedView.
+
+@property (nonatomic, readonly) BOOL isScrollable;          ///< check if cell view is able to scroll it's scrolledContentView or not.
 
 - (void)didUpdateScrollOffset:(CGPoint)offset;        ///< overridable. when a scrollView's contentOffset is changed, the method is called.
 
@@ -38,8 +40,8 @@
 
 - (void)reloadData;
 
-- (void)registerClassForGridCellView:(Class)cellViewClass;
-- (HKKScrollableGridTableCellView *)dequeueReusableViewForRowIndex:(NSUInteger)rowIndex;
+- (void)registerClassForGridCellView:(Class)cellViewClass reuseIdentifier:(NSString *)identifier;
+- (HKKScrollableGridTableCellView *)dequeueReusableViewForRowIndex:(NSUInteger)rowIndex reuseIdentifier:(NSString *)identifier;
 @end
 
 

@@ -3,7 +3,7 @@
 //  HKKScrollableGridView
 //
 //  Created by kyokook on 2014. 11. 10..
-//  Copyright (c) 2014 rhlab. All rights reserved.
+//  Copyright (c) 2014년 rhlab. All rights reserved.
 //
 
 #import "HKKScrollableGridView.h"
@@ -82,6 +82,8 @@ static NSString * const kNotificationUserInfoContentOffset = @"kNotificationUser
     _fixedView = [UIView new];
     _scrollView = [UIScrollView new];
     _scrolledContentView = [UIView new];
+//    _fixedView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+//    _scrolledContentView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     
     _scrollView.bounces = NO;
     _scrollView.showsHorizontalScrollIndicator = NO;
@@ -128,6 +130,11 @@ static NSString * const kNotificationUserInfoContentOffset = @"kNotificationUser
                                                object:nil];
 }
 
+- (BOOL)isScrollable
+{
+    return _scrollView.width < _scrollView.contentSize.width;
+}
+
 - (void)makeScrollableContentViewBeEmpty
 {
     [_scrolledContentView.subviews enumerateObjectsUsingBlock:^(UIView *subview, NSUInteger idx, BOOL *stop) {
@@ -168,6 +175,11 @@ static NSString * const kNotificationUserInfoContentOffset = @"kNotificationUser
 - (void)setCellViewClass:(Class)cellViewClass
 {
     _cellViewClass = cellViewClass;
+    
+    if (_baseView.superview) {
+        [_baseView removeFromSuperview];
+    }
+    
     _baseView = (HKKScrollableGridTableCellView *)[[cellViewClass alloc] initWithFrame:self.bounds];
     _baseView.backgroundColor = [UIColor clearColor];
     _baseView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -194,13 +206,15 @@ static NSString * const kNotificationUserInfoContentOffset = @"kNotificationUser
 #pragma mark -
 @interface HKKScrollableGridView () <UITableViewDataSource, UITableViewDelegate>
 {
-    Class _cellViewClass;
+//    Class _cellViewClass;
 }
 
 @property (nonatomic, strong) UITableView *tableView;
 
-@property (nonatomic, strong) NSIndexPath *temporaryIndexPath;                  // dequeue 로직이 중첩되어 있어서 불가피하게 임시 indexPath 저장이 필요함.
-@property (nonatomic, strong) HKKScrollableGridTableCell *temporaryCell;        // dequeue 로직이 중첩되어 있어서 불가피하게 임시 cell 저장이 필요함.
+@property (nonatomic, strong) NSIndexPath *temporaryIndexPath;
+@property (nonatomic, strong) HKKScrollableGridTableCell *temporaryCell;
+
+@property (nonatomic, strong) NSMutableDictionary *registeredClass;
 
 @property (nonatomic, assign) CGFloat offsetX;
 
@@ -303,21 +317,28 @@ static NSString * const kNotificationUserInfoContentOffset = @"kNotificationUser
     [self.tableView reloadData];
 }
 
-- (void)registerClassForGridCellView:(Class)cellViewClass
+- (void)registerClassForGridCellView:(Class)cellViewClass reuseIdentifier:(NSString *)identifier
 {
+    if (_registeredClass == nil) {
+        _registeredClass = @{}.mutableCopy;
+    }
+    
     NSAssert([cellViewClass isSubclassOfClass:[HKKScrollableGridTableCellView class]], @"CellViewClass being try to registered should be a subclass of HKKScrollableGridTableCellView");
     if ([cellViewClass isSubclassOfClass:[HKKScrollableGridTableCellView class]]) {
-        _cellViewClass = cellViewClass;
+        [_registeredClass setObject:cellViewClass forKey:identifier];
     }
 }
 
-- (HKKScrollableGridTableCellView *)dequeueReusableViewForRowIndex:(NSUInteger)rowIndex
+- (HKKScrollableGridTableCellView *)dequeueReusableViewForRowIndex:(NSUInteger)rowIndex reuseIdentifier:(NSString *)identifier
 {
-    NSAssert(_cellViewClass, @"HKKScrollableGridTableCellView class should be registered first!");
+    NSAssert(_registeredClass.count > 0, @"HKKScrollableGridTableCellView class should be registered first!");
     NSAssert(_temporaryIndexPath != nil, @"temporary index path shouldn't be nil!");
+    
+    Class classForIdentifier = [_registeredClass objectForKey:identifier];
+    
     HKKScrollableGridTableCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"HKKScrollableGridTableCell" forIndexPath:_temporaryIndexPath];
-    if (cell.cellViewClass == nil) {
-        cell.cellViewClass = _cellViewClass;
+    if (cell.cellViewClass == nil || [cell.baseView isMemberOfClass:classForIdentifier] == NO) {
+        cell.cellViewClass = classForIdentifier;
     }
     _temporaryCell = cell;
     return cell.baseView;
