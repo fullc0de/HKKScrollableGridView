@@ -279,13 +279,6 @@ static NSString * const kNotificationUserInfoContentOffset = @"kNotificationUser
     [self reloadData];
 }
 
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-    
-    _tableView.frame = self.bounds;
-}
-
 #pragma mark - Interfaces
 - (UITableView *)tableView
 {
@@ -298,6 +291,10 @@ static NSString * const kNotificationUserInfoContentOffset = @"kNotificationUser
         [_tableView registerClass:[HKKScrollableGridTableCell class] forCellReuseIdentifier:@"HKKScrollableGridTableCell"];
         [self addSubview:_tableView];
         
+        _tableView.translatesAutoresizingMaskIntoConstraints = NO;
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[table]-0-|" options:0 metrics:nil views:@{@"table":_tableView}]];
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[table]-0-|" options:0 metrics:nil views:@{@"table":_tableView}]];
+
         _heightForHeader = 40.0f;
         _heightForRow = 40.0f;
     }
